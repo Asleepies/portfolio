@@ -1,0 +1,10 @@
+react/components/ActionMenu.js
+react/components/Attributes.js
+react/components/JobDisplay.js
+react/components/JobFetcher.js
+react/components/JobPicker.js
+react/components/Names.js
+react/components/RacePicker.js
+react/containers/CharacterInfo.js
+react/containers/test.js
+styles/waveMobile.css
