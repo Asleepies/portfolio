@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link href="../styles/style.css" rel="stylesheet" />
-    
-    
+    <link href="../styles/style.css" rel="stylesheet" />  
+    <script src="https://kit.fontawesome.com/149dc9b89d.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="navBarBox">
-      <ul class="NavBarList">
+      <ul class="navBarList">
+        <a href="../index.html"><i class="fa-solid fa-house"></i></a>
         <a href="./about.html" class="navLink">
           <li>About</li>
         </a>
@@ -19,19 +19,61 @@
           <div class="dropContent">
             <a href="../html/wave.html">Wavelength</a>
             <a href="../html/wordle.html">Wordle</a>
-            <a href="../html/dnd.html">D&D Character Creator</a>
+            <a href="https://asleepies.github.io/dndcg">D&D Character Creator</a>
           </div>
         </div>
-        <a href="../html/contact.html" class="navLink">
+        <a href="../html/contact.php" class="navLink">
           <li>Contact</li>
         </a>
       </ul>
     </div>
 
-    <div>I'm the projects page</div>
-    <a href="../html/wave.html">Wavelength</a>
-    <a href="../html/wordle.html">Wordle</a>
-    <a href="../html/dnd.html">D&D Character Creator</a>
+    <h1 class="pageTitle">PROJECTS</h1>
+    <div id="page">
+      <div class="pageProj">
+        
+          <div class="projectCard">
+            <div class="cardTop">
+              <img src="../img/word.png" alt="">
+            </div>
+            <div class="cardBottom">
+              <a href="../html/wordle.html">Wordle</a>
+              <p>A clone of the hit game built with HTMl, CSS, and Javascript</p>
+            </div>
+          </div>
+          
+          <div class="projectCard">
+            <div class="cardTop">
+              <img src="../img/wave.png" alt="">
+            </div>
+            <div class="cardBottom">
+              <a href="../html/wave.html">Wavelength</a>
+              <p>An browser version of the party game Wavelength. Created with HTML, CSS, and Javascript</p>
+            </div>
+          </div>
+      
+          <div class="projectCard">
+            <div class="cardTop">
+              <img src="../img/dnd.png" alt="">
+            </div>
+            <div class="cardBottom">
+              <a href="../html/dnd.html">D&D Character Creator</a>
+              <p>A React app that uses the D&D 5e API to help you create a new Dungeons & Dragons character</p>
+            </div>
+          </div>
+          
+          <div class="projectCard">
+            <div class="cardTop">
+              <img src="../img/cheese.png" alt="">
+            </div>
+            <div class="cardBottom">
+              <a href="">Cheese-3BO</a>
+              <p>A Discord Bot built with Python and Redis. Originally a simple points tracker for discord games, Cheebo was expanded to assist with watch parties and watchlists. They also respond to some key phrases.</p>
+            </div>
+          </div>
+        
+      </div>
+    </div>
 
   </body>
 </html>

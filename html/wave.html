@@ -8,16 +8,18 @@
 <!-- <link rel="stylesheet" media='screen and (min-width: 768px)' href="../styles/wave.css"/> -->
 <!-- <link rel="stylesheet" media='screen and (max-width: 600px)' href="../styles/waveMobile.css"/> -->
 <script defer src="../scripts/wave.js" charset="utf-8"></script>
+<script src="https://kit.fontawesome.com/149dc9b89d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="navBarBox">
     <div class="folded">&#9776;
     <ul class="navBarList">
+      <a href="../index.html"><i class="fa-solid fa-house"></i></a>
       <a href="../html/about.html" class="navLink">
         <li>About</li>
       </a>
-      <a href="../html/contact.html" class="navLink">
+      <a href="../html/contact.php" class="navLink">
         <li>Contact</li>
       </a>
       <div class="dropdownCon">
@@ -28,7 +30,7 @@
           <div class="dropContent">
             <a href="../html/wave.html">Wavelength</a>
             <a href="../html/wordle.html">Wordle</a>
-            <a href="../html/dnd.html">D&D Character Creator</a>
+            <a href="https://asleepies.github.io/dndcg">D&D Character Creator</a>
           </div>
         </div>
       </div>
@@ -89,7 +91,8 @@
       </div>
       <div class="options">
         <button onclick="startGame()" id='startButt'>Start</button>
-        <button onclick="options()">options</button> 
+        <button onclick="options()">Options</button> 
+        <button onclick="howTo()">How To</button> 
       </div>
       <div class="teamBox" id='t2b'>
         <div class='lightBox'>
@@ -118,6 +121,17 @@
     </div> -->
 
     <div class="modalBG" id='modalBG'>
+      <div class="modalArea" id="modalHow">
+        <h3>How To Play:</h3>
+        <p>
+          - Each round your team will pick a Psychic. The psychic draws a card and looks at the random target area. <br>
+          - They will give a one word clue about the location of the target area in relation to the drawn card, then your team will move the slider to where you think it is. <br>
+          - After setting your guess, the other team will have a chance to guess if the target is to the left or right of your team's guess. <br>
+          - The target is then revealed and points are awarded. First to 10 wins.
+        </p>
+        <button onclick="howClose()" class='closeButt'>&#9747;</button>
+      </div>
+
       <div class="modalArea" id='modalTots'>
         Choose One
         <div class="totLine" id="opt0" onclick="pickTot(this.id)">
@@ -153,13 +167,13 @@
       </div>
 
       <div class="modalArea" id='optionsBox'>
-        <span id='optionsHeader'>Options:</span>
-        <button onclick="newPlayerWindow()">Add Players</button>
-        <button onclick="removePlayerWindow()">Remove Players</button>
-        <button onclick="makeTeams()">Randomize teams</button>
-        <button onclick="oopsRedrawd()">Oops, redraw</button>
-        <button onclick="reset()">reset</button>
-        <button onclick="optionsClose()" id='optClose'>&#9747;</button>
+        <h3 id='optionsHeader'>Options:</h3>
+        <button class="optButton"onclick="newPlayerWindow()">Add Players</button>
+        <button class="optButton"onclick="removePlayerWindow()">Remove Players</button>
+        <button class="optButton"onclick="makeTeams()">Randomize teams</button>
+        <button class="optButton"onclick="oopsRedrawd()">Oops, redraw</button>
+        <button class="optButton"onclick="reset()">reset</button>
+        <button class="closeButt"onclick="optionsClose()">&#9747;</button>
       </div>
 
       <div class="modalArea" id='modalWin'>

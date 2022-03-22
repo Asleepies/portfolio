@@ -64,19 +64,14 @@ a {
   display: flex;
 }
 .dropContent a {
-  color: var(--mainBG);
+  background-color: var(--mainBG);
+  color: var(--mainBorderColor);
   padding: 2px;
   text-decoration: none;
   display: block;
   border-bottom: 1px solid gray;
 }
-.dropContent a:hover {
-  background-color: var(--mainBG);
-  color: var(--mainBorderColor);
-}
 .dropdownCon:hover .dropContent {display: block;}
-
-
 .gameBox {
   display: flex;
   flex-direction: column;
@@ -394,7 +389,7 @@ a {
   padding: 10px;
   width: 460px;
   font-family: Trebuchet MS, sans-serif;
-  font-size: 30px;
+  
   font-weight: bold;
   text-align: center;
   border: 3px solid #2da59f;
@@ -416,6 +411,14 @@ a {
 .totLine:hover {
   box-shadow: 0 0 10px green;
 }
+#modalHow {
+  display: none;
+  position: relative;
+}
+#modalHow * {
+  margin: .5em;
+  /* font-size: 1em; */
+}
 #modalTots {
   display: none;
 }
@@ -434,21 +437,18 @@ a {
 }
 #optionsBox {
   display:none;
-
-  /* margin: 3em auto; */
+  position: relative;
 }
-#optionsBox button {
+.optButton {
   margin: 3px;
   width: 12em;
 }
-#optionsBox #optClose {
-
-  display:flex;
-  justify-content: center;
+.closeButt {
   position: absolute;
-  left: 75%;
-  width: 1em;
-  transform: scale(1.5)
+  right: 1em;
+  transform: scale(1.5);
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 }
 .clueLine {
   display: flex; 

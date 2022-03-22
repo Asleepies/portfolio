@@ -523,6 +523,14 @@ function options() {
   document.getElementById('modalBG').style.display = 'block';
   document.getElementById('optionsBox').style.display = 'flex';
 }
+function howTo() {
+  document.getElementById('modalBG').style.display = 'block';
+  document.getElementById('modalHow').style.display = 'flex';
+}
+function howClose() {
+  document.getElementById('modalBG').style.display = 'none';
+  document.getElementById('modalHow').style.display = 'none';
+}
 function optionsClose() {
   document.getElementById('optionsBox').style.display = 'none';
   document.getElementById('modalBG').style.display = 'none';

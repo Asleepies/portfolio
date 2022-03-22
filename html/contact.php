@@ -1,3 +1,21 @@
+<?php
+
+if($_POST["submit"]) {
+    $recipient="EvanAndyJones@gmail.com";
+    $subject="Portfolio Contact Form";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $subject=$_POST["subject"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +27,7 @@
   <body>
     <div class="navBarBox">
       <ul class="navBarList">
-        <a href="../index.html"><i class="fa-solid fa-house"></i></a>
+      <a href="../index.html"><i class="fa-solid fa-house"></i></a>
         <a href="../html/about.html" class="navLink">
           <li>About</li>
         </a>
@@ -23,15 +41,17 @@
             <a href="https://asleepies.github.io/dndcg">D&D Character Creator</a>
           </div>
         </div>
-        <a href="../html/contact.php" class="navLink">
+        <a href="../html/contact.html" class="navLink">
           <li>Contact</li>
         </a>
       </ul>
     </div>
+
+    <?=$thankYou ?>
     
-    <form action="./contact.php" method="POST">
+    <form action="contact.php" method="POST">
       <label for="sender">Name:</label><br>
-      <input type="text" name="sender" id="sender"><br>
+      <input type="email" name="sender" id="sender"><br>
 
       <label for="senderEmail">Email:</label><br>
       <input type="email" name="senderEmail" id="senderEmail"><br>
@@ -41,7 +61,7 @@
 
       <label for="message">Message:</label><br>
       <textarea name="message" id="message" cols="30" rows="10"></textarea><br>
-      <input type="submit" value="Submit">
+      <input type="submit">
     </form>
 
   </body>

@@ -8,3 +8,5 @@ react/components/RacePicker.js
 react/containers/CharacterInfo.js
 react/containers/test.js
 styles/waveMobile.css
+img/.DS_Store
+.DS_Store
