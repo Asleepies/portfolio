@@ -5,28 +5,31 @@
 }
 body {
   background-color: var(--black);
-  color: var(--white);
-  
+  color: var(--white); 
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
 }
 .navBarBox {
   width: 100%;
   position: absolute;
+  top: 1%;
 }
 .navBarList {
-  margin: 0 1em;
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: end;
+  justify-content: start;
   list-style: none;
+  position: relative;
 }
 .navBarList li {
   margin: 0 .25em;
 }
 .dropbtn {
   border: none;
-}
-a {
-  color: inherit;
-  text-decoration: none;
 }
 .dropdownCon {
   position: relative;
@@ -45,48 +48,56 @@ a {
 .dropdownCon:hover .dropContent {
   display: block;
 }
-#page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--black)
-}
 .pageTitle {
-  font-family: Arial, Helvetica, sans-serif;
   margin-bottom: .25em;
   text-align: center;
 }
-.pageAbout {
-  width: min(85%, 1000px);
-  padding: 2em;
+#page {
+  margin: auto;
+  width: min(55%, 675px);
+  min-width: 19.5em;
+  border-radius: .3em;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   background-color: var(--white);
-  border-radius: 6px;
+  color: var(--black)
 }
-.pageAbout img{ 
+.home {
+  margin: 1em;
+  font-size: 1.5em;
+  text-align: center;
+}
+.proj {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.abt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contact {
+  text-align: center;
+  padding: .5em;
+}
+.contact * {
+  margin: .25em;
+}
+.skillsImg { 
   height: 7em;
   width: auto;
   margin: 1em;
 }
-.pageProj {
-  width: min(55%, 675px);
-  /* width: 55%; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  background-color: var(--white);
-  border-radius: 6px;
-}
 .projectCard {
   color:rgb(56, 56, 56);
   margin: 1em;  
-  width: 300px;
-  height: 300px;
-  min-width: 300px;
-  min-height: 300px;
+  width: 18.65em;
+  height: 18.65em;
+  min-width: 18.65em;
+  min-height: 18.65em;
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 0 10px gray;
@@ -96,11 +107,16 @@ a {
 }
 .cardTop {
   height: 60%;
-  background-color: darkcyan;
   overflow: hidden;
 }
 .cardBottom {
   height: 40%;
   background-color:rgb(189, 189, 189);
   box-shadow: 0 0 10px 1px rgba(79, 79, 79, 0.543);
+  color: var(--black);
+  font-weight: bold;
+  padding: 1%;
 } 
+.cardBottom p  {
+  font-weight:normal;
+}
