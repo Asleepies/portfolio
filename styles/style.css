@@ -120,3 +120,8 @@ a {
 .cardBottom p  {
   font-weight:normal;
 }
+
+#game {
+  margin: 4em;
+  transform: scale(1.5)
+}
