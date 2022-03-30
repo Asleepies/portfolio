@@ -38,11 +38,11 @@ let cursors;
 
 function preload() {
   this.load.image('bg', '../img/mort//background.png')
-  this.load.spritesheet('ground', '../img/mort//ground.png', { frameWidth: 240, frameHeight: 32 });
-  this.load.spritesheet('mort', '../img/mort//mort.png', { frameWidth: 24, frameHeight: 24 });
-  this.load.spritesheet('torchS', '../img/mort//torchS.png', {frameWidth: 8, frameHeight: 24});
-  this.load.spritesheet('torchM', '../img/mort//torchM.png', {frameWidth: 8, frameHeight: 32});
-  this.load.spritesheet('torchL', '../img/mort//torchL.png', {frameWidth: 8, frameHeight: 40});
+  this.load.spritesheet('ground', '../img/mort/ground.png', { frameWidth: 240, frameHeight: 32 });
+  this.load.spritesheet('mort', '../img/mort/mort.png', { frameWidth: 24, frameHeight: 24 });
+  this.load.spritesheet('torchS', '../img/mort/torchS.png', {frameWidth: 8, frameHeight: 24});
+  this.load.spritesheet('torchM', '../img/mort/torchM.png', {frameWidth: 8, frameHeight: 32});
+  this.load.spritesheet('torchL', '../img/mort/torchL.png', {frameWidth: 8, frameHeight: 40});
 }
 
 function create() {
