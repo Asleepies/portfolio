@@ -19,7 +19,6 @@ body {
   left: 0;
   top: 25%
 }
-
 .navBarBox {
   position: absolute;
   left: 0;
@@ -76,13 +75,9 @@ a {
   color: black
 }
 .dropdownCon:hover .dropContent {display: block;}
-
-
-
 #gameBoard {
-  
-  width: 525px;
-  height: 100vh;
+  width: 35em;
+  height: 45em;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -100,7 +100,7 @@ function create() {
   //the player
   mort = this.physics.add.sprite(40, 107, 'mort', 0)
   .setBodySize(16,20, true)
-  // .play('bounce') 
+  .play('bounce') 
   this.physics.add.collider(ground, mort)
 
   //the hurdles 
