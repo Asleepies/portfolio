@@ -25,6 +25,7 @@ let isGameOver = false;
 
 let score = 0;
 let scoreBoard;
+let howTo;
 
 let isJump = false;
 let lastJump = 0;
@@ -87,6 +88,7 @@ function create() {
   })
 
   const bg = this.add.image(0, 0, 'bg').setOrigin(0)
+  howTo = this.add.text(120, 60, `Press Spacebar!`, { fontSize: '12px', color:'#000'}).setOrigin(.5)
   ground = this.physics.add.staticSprite(120, 144, 'ground', 2)
 
   //invisible line for scoring
@@ -149,6 +151,7 @@ function update () {
       
     } else {
       isStart = true;
+      howTo.destroy()
       ground.play('groundMove')
     }
   } 
