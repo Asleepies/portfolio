@@ -49,7 +49,7 @@ function preload() {
 
 function create() {
   cursors = this.input.keyboard.createCursorKeys();
-  pointer = this.input.pointer1;
+  pointer = this.input.activePointer.isDown;
   this.anims.create({ key: 'walk',
     frames: this.anims.generateFrameNumbers('mort', { start: 4, end: 9 }),
     frameRate: 12,
@@ -146,7 +146,7 @@ function update () {
 }
 function jump() {
   let press = cursors.space.isDown || pointer.isDown
-  console.log(press)
+  
   let now = Date.now()
   if (press && mort.body.touching.down) {
     if (now - lastJump > 900) {
@@ -181,12 +181,6 @@ function newTorch (scene) {
         .play(`light${torch}`))
       : null;
   }
-  
-  // const torch = options[Math.floor(Math.random()*options.length)]
-  // torch != 'p' ? 
-  //   torches.add(scene.physics.add.sprite(245, yVals[torch], `torch${torch}`, 0)
-  //     .play(`light${torch}`))
-  //   : null;
   
 }
 function endTorch () {  
