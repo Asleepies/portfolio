@@ -36,6 +36,7 @@ let lastTorch = 0
 let mort;
 let ground;
 let cursors;
+let pointer;
 
 function preload() {
   this.load.image('bg', '../img/mort//background.png')
@@ -48,7 +49,7 @@ function preload() {
 
 function create() {
   cursors = this.input.keyboard.createCursorKeys();
-  
+  pointer = this.input.activePointer;
   this.anims.create({ key: 'walk',
     frames: this.anims.generateFrameNumbers('mort', { start: 4, end: 9 }),
     frameRate: 12,
@@ -91,10 +92,11 @@ function create() {
   howTo = this.add.text(120, 60, `Press Spacebar!`, { fontSize: '12px', color:'#000'}).setOrigin(.5)
   ground = this.physics.add.staticSprite(120, 144, 'ground', 2)
 
-  //invisible line for scoring
+  //line for scoring
   const line = this.add.line(32, 107, 0, 0, 0, 50)
   const goal = this.physics.add.existing(line)
   this.physics.add.collider(ground, goal)
+  //line for destroying 
   const end = this.add.line(0, 107, 0, 0, 0, 50)
   const out = this.physics.add.existing(end)
   this.physics.add.collider(ground, out)
@@ -129,23 +131,9 @@ function update () {
     mort.body.touching.down ? mort.anims.play('walk', true) : mort.anims.play('jump', true);
 
     //jump controls
-    if (cursors.space.isDown && mort.body.touching.down) {
-      if (now - lastJump > 900) {
-        isJump = true;
-        lastJump = now
-      }
-    }
-    if (isJump && !cursors.space.isDown) {
-      isJump = false;
-    }
-    if (isJump && cursors.space.isDown) {
-      mort.y -= 5;
-    }
-    if (isJump && mort.y <= 45) {
-      isJump = false;
-    }
+    jump()
     
-  } else if (cursors.space.isDown) {
+  } else if (cursors.space.isDown || pointer.isDown) {
 
     if (isGameOver) {
       
@@ -155,6 +143,26 @@ function update () {
       ground.play('groundMove')
     }
   } 
+}
+function jump() {
+  let press = cursors.space.isDown || pointer.isDown
+  console.log(press)
+  let now = Date.now()
+  if (press && mort.body.touching.down) {
+    if (now - lastJump > 900) {
+      isJump = true;
+      lastJump = now
+    }
+  }
+  if (isJump && !press) {
+    isJump = false;
+  }
+  if (isJump && press) {
+    mort.y -= 5;
+  }
+  if (isJump && mort.y <= 45) {
+    isJump = false;
+  }
 }
 
 function newTorch (scene) {
