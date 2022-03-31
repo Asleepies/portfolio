@@ -49,7 +49,7 @@ function preload() {
 
 function create() {
   cursors = this.input.keyboard.createCursorKeys();
-  pointer = this.input.activePointer;
+  pointer = this.input.pointer1;
   this.anims.create({ key: 'walk',
     frames: this.anims.generateFrameNumbers('mort', { start: 4, end: 9 }),
     frameRate: 12,
