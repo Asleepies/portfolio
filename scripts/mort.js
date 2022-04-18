@@ -145,7 +145,7 @@ function update () {
   } 
 }
 function jump() {
-  let press = cursors.space.isDown || pointer.isDown
+  let press = cursors.space.isDown || pointer
   
   let now = Date.now()
   if (press && mort.body.touching.down) {
