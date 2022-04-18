@@ -49,7 +49,7 @@ function preload() {
 
 function create() {
   cursors = this.input.keyboard.createCursorKeys();
-  pointer = this.input.activePointer.isDown;
+  pointer = this.input.activePointer;
   this.anims.create({ key: 'walk',
     frames: this.anims.generateFrameNumbers('mort', { start: 4, end: 9 }),
     frameRate: 12,
@@ -133,7 +133,7 @@ function update () {
     //jump controls
     jump()
     
-  } else if (cursors.space.isDown || pointer) {
+  } else if (cursors.space.isDown || pointer.isDown) {
 
     if (isGameOver) {
       
@@ -145,7 +145,7 @@ function update () {
   } 
 }
 function jump() {
-  let press = cursors.space.isDown || pointer
+  let press = cursors.space.isDown || pointer.isDown
   
   let now = Date.now()
   if (press && mort.body.touching.down) {
