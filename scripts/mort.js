@@ -131,9 +131,24 @@ function update () {
     mort.body.touching.down ? mort.anims.play('walk', true) : mort.anims.play('jump', true);
 
     //jump controls
-    jump()
+    let press = cursors.space.isDown || this.input.activePointer.isDown
+    if (press && mort.body.touching.down) {
+      if (now - lastJump > 900) {
+        isJump = true;
+        lastJump = now
+      }
+    }
+    if (isJump && !press) {
+      isJump = false;
+    }
+    if (isJump && press) {
+      mort.y -= 5;
+    }
+    if (isJump && mort.y <= 45) {
+      isJump = false;
+    }
     
-  } else if (cursors.space.isDown || pointer) {
+  } else if (cursors.space.isDown || pointer.isDown) {
 
     if (isGameOver) {
       
@@ -145,7 +160,7 @@ function update () {
   } 
 }
 function jump() {
-  let press = cursors.space.isDown || pointer
+  let press = cursors.space.isDown || pointer.isDown
   
   let now = Date.now()
   if (press && mort.body.touching.down) {
