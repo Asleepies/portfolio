@@ -133,7 +133,7 @@ function update () {
     //jump controls
     jump()
     
-  } else if (cursors.space.isDown || pointer.isDown) {
+  } else if (cursors.space.isDown || pointer) {
 
     if (isGameOver) {
       
