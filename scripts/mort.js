@@ -148,7 +148,7 @@ function update () {
       isJump = false;
     }
     
-  } else if (cursors.space.isDown || pointer.isDown) {
+  } else if (cursors.space.isDown || this.input.activePointer.isDown) {
 
     if (isGameOver) {
       
