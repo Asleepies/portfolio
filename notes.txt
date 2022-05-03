@@ -2,7 +2,7 @@ Changes:
 Removed Team names/display. Function still there, will repurpose
 
 Fix it:
-- Redraw not working properly
+
 
 To-Do: 
 -Add teams into Options menu / make team maker/randomizer modal 
