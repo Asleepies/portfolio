@@ -91,9 +91,13 @@ h3, ul {
 
 @media only screen and (min-width: 560px) {
 
+.page {
+  max-width: 50em;
+}
 .aboutPage, .projectPage {
   margin: auto;
-  width: 50%;
+  /* width: 8
+  300%; */
 }
   
 }

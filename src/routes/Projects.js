@@ -9,22 +9,26 @@ export default function Projects() {
                 <div> <a href='http://www.asleepiesceramics.com' className='projLink'>
                 Asleepies Ceramics</a>:
                 <p className='projBlurb'>An e-Commerce site built on the PERN stack<br/>
-                User, Cart, and Checkout systems with Paypal integration</p>
+                Front-End: React, React-Router-Dom, React-Bootstrap, Typescript<br/>
+                Back-End: Express, Sequelize, PostgreSQL, NodeMailer</p>
                 </div>
 
                 <div> <a href='https://asleepies.github.io/wavelength/' className='projLink'> 
                 Wavelength</a>:
-                <p className='projBlurb'>A browser game based on the party game Wavelength. Built with vanilla HTML, CSS, & JS</p>
+                <p className='projBlurb'>A browser game based on the party game Wavelength. <br/>
+                Front-End: HTML, CSS, Javascript</p>
                 </div>
 
                 <div> <a href='https://asleepies.github.io/wordalso/' className='projLink'>
                 Wordle</a>:
-                <p className='projBlurb'>A clone of the word game. Built with HTML, CSS, & JS</p>
+                <p className='projBlurb'>A clone of the word game. <br/>
+                Front-End: HTML, CSS, Javascript</p>
                 </div>
 
                 <div><a href='https://asleepies.github.io/DinoRunner/' className='projLink'>
                 Dino Runner</a>:
-                <p className='projBlurb'>A infinite runner game built with Phaser.js</p>
+                <p className='projBlurb'>A infinite runner game <br/>
+                Front-End: Javascript, Phaser.js</p>
                 </div>
                 
     

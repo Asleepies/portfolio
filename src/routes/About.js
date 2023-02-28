@@ -1,10 +1,15 @@
-import { Card } from "react-bootstrap"
 export default function About() {
 
   return (
     <div className="page">
       <h2 style={{margin:'.25em'}}>About Me</h2>
-      <span id="bio">I'm a self taught engineer with a passion for problem solving. I was first drawn to coding and software development in 2011 while working in an industry plagued by obsolete software, and have been a hobby coder ever since. In 2020 I decided to make a career change and have built several personal projects since to expand my knowledge and abilities. I'm always looking for new ways to improve and interesting projects to take on.</span>
+      <div>
+        <a href='https://github.com/Asleepies' className='projLink' style={{margin:'.25em'}}>
+                Git Hub</a>
+        <a href='https://leetcode.com/Asleepies/' className='projLink' style={{margin:'.25em'}}>
+                LeetCode</a>
+      </div>
+      <div id="bio">I'm a self taught engineer with a passion for problem solving. I was first drawn to coding and software development in 2011 while working in an industry plagued by obsolete software, and have been a hobby coder ever since. In 2020 I decided to make a career change and have built several personal projects since to expand my knowledge and abilities. I'm always looking for new ways to improve and interesting projects to take on.</div>
       <div className="aboutPage">
         <h3>Languages & Frameworks</h3>
         <ul>
