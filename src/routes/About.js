@@ -13,8 +13,6 @@ export default function About() {
       <div className="aboutPage">
         <h3>Languages & Frameworks</h3>
         <ul>
-            <li>HTML</li>
-            <li>CSS</li>
             <li>Javascript</li>
             <li>Node</li>
             <li>React</li>
@@ -22,9 +20,10 @@ export default function About() {
             <li>Bootstrap</li>
             <li>Sequelize</li>
             <li>Phaser</li>
+            <li>HTML</li>
+            <li>CSS</li>
             <li>Python</li>
             <li>PHP</li>
-            <li>AJAX</li>
             <li>Ruby</li>
         </ul>
   

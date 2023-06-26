@@ -63,7 +63,7 @@ export default function Contact() {
             <h2 style={{margin:'.25em'}}>Contact Me</h2>
             <p>You can reach me at: </p>
             <a href="mailto:asleepies@gmail.com" className='contactLink'>
-            Asleepies@gmail.com</a>
+            EvanAndyJones@gmail.com</a>
 
             {/* <form id='contactForm'>
                 <div id='contactDetails'>
