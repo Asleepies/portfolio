@@ -9,7 +9,7 @@ function App() {
     <div className="App">
         
         <Link to='/'>
-          <h1 className="header">Effie Jones</h1>
+          <h1 className="header">Evan Jones</h1>
         </Link>
         <NavLink to='/projects' className='navLink'> Projects </NavLink>
         <NavLink to='/about' className='navLink'> About </NavLink>
