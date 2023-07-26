@@ -13,19 +13,19 @@ export default function Projects() {
                 Back-End: Express, Sequelize, PostgreSQL, NodeMailer</p>
                 </div>
 
-                <div> <a href='https://asleepies.github.io/wavelength/' className='projLink'> 
+                <div> <a href='https://evanandij.github.io/wordalso/' className='projLink'>
+                Wordle</a>:
+                <p className='projBlurb'>A wordle clone. <br/>
+                Front-End: React, React-Bootstrap, CSS</p>
+                </div>
+
+                <div> <a href='https://evanandij.github.io/wavelength/' className='projLink'> 
                 Wavelength</a>:
                 <p className='projBlurb'>A browser game based on the party game Wavelength. <br/>
                 Front-End: HTML, CSS, Javascript</p>
                 </div>
 
-                <div> <a href='https://asleepies.github.io/wordalso/' className='projLink'>
-                Wordle</a>:
-                <p className='projBlurb'>A clone of the word game. <br/>
-                Front-End: HTML, CSS, Javascript</p>
-                </div>
-
-                <div><a href='https://asleepies.github.io/DinoRunner/' className='projLink'>
+                <div><a href='https://evanandij.github.io/DinoRunner/' className='projLink'>
                 Dino Runner</a>:
                 <p className='projBlurb'>A infinite runner game <br/>
                 Front-End: Javascript, Phaser.js</p>
