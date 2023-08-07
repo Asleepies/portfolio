@@ -18,7 +18,7 @@ export default function Projects() {
                 <p className='projBlurb'>A wordle clone. <br/>
                 Front-End: React, React-Bootstrap, CSS</p>
                 </div>
-
+        
                 <div> <a href='https://evanandij.github.io/wavelength/' className='projLink'> 
                 Wavelength</a>:
                 <p className='projBlurb'>A browser game based on the party game Wavelength. <br/>
